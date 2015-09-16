@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://bootswatch.com/readable/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pig and Skunk</title>
+  </head>
+  <body>
+    <div class= "container">
+      <h1 class="text-center">PIG & SKUNK</h1>
+      <p>Maybe the rules here at some point...</p>
+      <h1>Player 1</h1>
+      <p><span class="player1GameScore"></span></p>
+      <p><span class="player1TurnScore"></span></p>
+      <div class = "row">
+        <div class="user-selection">
+          <div class= "col-md-4">
+            <form id="pig">
+              <div class="radio">
+                <h5>What would you like to do?</h5>
+                <label>
+                  <input type="radio" name="turn-choice" id="rollPlayer1" value="roll">
+                ROLL, baby roll!
+                </label>
+                <br>
+                <label>
+                  <input type="radio" name="turn-choice" id="holdPlayer1" value="hold">
+                  HOLD
+                </label>
+              </div>
+            <button type="submit" class="btn btn-info">Oink!</button>
+          </form>
+        </div>
+        <div class= "col-md-4">
+          <h1>Player 2</h1>
+          <p><span class="player2GameScore"></span></p>
+          <p><span class="player2TurnScore"></span></p>
+           <form id="skunk">
+            <div class="radio">
+              <h5>What would you like to do?</h5>
+              <label>
+                <input type="radio" name="turn-choice" id="rollPlayer2" value="roll">
+                ROLL, baby roll!
+              </label>
+              <br>
+              <label>
+                <input type="radio" name="turn-choice" id="holdPlayer2" value="hold">
+                HOLD
+              </label>
+            </div>
+            <button type="submit" class="btn btn-info">Spew!</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

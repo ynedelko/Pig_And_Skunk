@@ -17,3 +17,24 @@ Player.prototype.roll = function() {
    this.turnScore = 0;
   }
 };
+
+$(document).ready(function() {
+  $("form#pig").submit(function(event) {
+    event.preventDefault();
+    var player1 = new Player ("player1");
+
+    var player1Choice = $("input[name=turn-choice]:checked", "#pig").val();
+
+
+    if (player1Choice === "roll"){
+      player1.roll;
+    } else {
+      player1.hold;
+    }
+
+    var gameScore = player1.gameScore;
+    var turnScore = player1.turnScore;
+    $(".player1GameScore").text(gameScore);
+    $(".player1TurnScore").text(turnScore);
+  });
+});
