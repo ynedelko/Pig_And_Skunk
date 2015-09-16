@@ -1,6 +1,6 @@
 describe("Player", function() {
-  it("describes the properties of a player when it's not their turn", function() {
+  it("describes the properties of a player when they start the game", function() {
     var testPlayer = new Player("Jim");
-    expect(testPlayer.gameScore).to.equal(10);
+    expect(testPlayer.gameScore).to.equal(0);
   });
 });
