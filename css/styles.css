@@ -1,3 +1,7 @@
-#result {
+.pigTurnMessage {
+  display: none;
+}
+
+.skunkTurnMessage {
   display: none;
 }
