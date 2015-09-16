@@ -24,10 +24,12 @@ Player.prototype.roll = function() {
 $(document).ready(function() {
   var player1 = new Player ("player1");
   player1.turn = true;
-  var player2 = new Player ("player2")
+  var player2 = new Player ("player2");
   player2.turn = false;
-  var skunkTurnMessage = "Skunk, it's your turn!"
-  var pigTurnMessage = "Pig, it's your turn!"
+  var skunkTurnMessage = "Skunk, it's your turn!";
+  var pigTurnMessage = "Pig, it's your turn!";
+  var skunkWinnerMessage = "Skunk, you are the WINNER!!";
+  var pigWinnerMessage = "Pig, you are the WINNER!!";
   $("form#pig").submit(function(event) {
     event.preventDefault();
 
@@ -44,8 +46,11 @@ $(document).ready(function() {
     $(".player1GameScore").text(gameScore);
     $(".player1TurnScore").text(turnScore);
     if (player1.turn === false) {
-      $(".TurnMessage").text(skunkTurnMessage);
+      $(".turnMessage").text(skunkTurnMessage);
       player2.turn = true;
+    }
+    if (player1.gameScore >= 100) {
+      $(".winnerMessage").text(pigWinnerMessage);
     }
 
   });
@@ -66,8 +71,11 @@ $(document).ready(function() {
     $(".player2GameScore").text(gameScore);
     $(".player2TurnScore").text(turnScore);
     if (player2.turn === false) {
-      $(".TurnMessage").text(pigTurnMessage);
+      $(".turnMessage").text(pigTurnMessage);
       player1.turn = true;
+    }
+    if (player2.gameScore >= 100) {
+      $(".winnerMessage").text(skunkWinnerMessage);
     }
   });
 });

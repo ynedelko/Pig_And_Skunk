@@ -10,15 +10,13 @@
   <body>
     <div class= "container">
       <h1 class="text-center">PIG & SKUNK</h1>
-      <p>Maybe the rules here at some point...</p>
-      <h2><span class="TurnMessage"></span></h2>
+      <p>Pig & Skunk, repeatedly roll a die until you either roll a 1 or you decide to hold. <strong>Pig, you start!</strong></p>
+      <h2><span class="turnMessage"></span></h2>
       <h1>Pig</h1>
       <p>TOTAL POINTS: <span class="player1GameScore"></span></p>
       <p>Turn Points: <span class="player1TurnScore"></span></p>
 
-      <div class = "row">
         <div class="user-selection">
-          <div class= "col-md-4">
             <form id="pig">
               <div class="radio">
                 <h5>What would you like to do?</h5>
@@ -31,11 +29,10 @@
                   <input type="radio" name="turn-choice" id="holdPlayer1" value="hold">
                   HOLD
                 </label>
-              </div>
+                <br>
             <button type="submit" class="btn btn-info">Oink!</button>
           </form>
         </div>
-        <div class= "col-md-4">
           <h1>Skunk</h1>
           <p>TOTAL POINTS: <span class="player2GameScore"></span></p>
           <p>Turn Points: <span class="player2TurnScore"></span></p>
@@ -56,8 +53,6 @@
             <button type="submit" class="btn btn-info">Spew!</button>
           </form>
         </div>
-      </div>
-    </div>
   </div>
   </body>
 </html>
